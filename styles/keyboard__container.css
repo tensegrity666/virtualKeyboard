@@ -1,0 +1,28 @@
+.keyboard__container {
+  box-sizing: border-box;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+
+  padding: 5px 1px 3px;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+
+  border: 1px solid transparent;
+
+  font-size: 2rem;
+  line-height: var(--small-key-height);
+  flex-shrink: 0;
+
+  width: 100vw;
+  max-width: 1920px;
+  height: var(--small-height);
+  background-color: var(--background-color);
+  color: var(--font-color);
+
+  transition: var(--transition);
+  opacity: 1;
+}

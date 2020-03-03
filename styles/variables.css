@@ -1,0 +1,12 @@
+:root {
+  --small-height: 33vh;
+  --font-color: rgb(255, 255, 255);
+  --background-color: rgba(41, 71, 55, 0.5);
+  --key-background-color: rgba(43, 106, 199, 0.8);
+  --border-radius: 15px;
+  --transition: all 0.3s linear;
+
+  --small-key-height: calc(var(--small-height) / 6);
+
+  font-size: 10px;
+}
