@@ -1,7 +1,7 @@
 .keyboard__key {
   box-sizing: border-box;
   text-align: center;
-  width: 8%;
+  width: 8.5%;
   max-width: 5rem;
   border: 2px solid transparent;
   border-radius: 0.7rem;
