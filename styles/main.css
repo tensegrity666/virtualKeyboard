@@ -1,9 +1,8 @@
+@import "/styles/normalize.css";
 @import "/styles/variables.css";
 @import "/styles/keyboard__container.css";
 @import "/styles/keyboard__container_hide.css";
 @import "/styles/keyboard__key.css";
-
-body {
-  margin: 0;
-  padding: 0;
-}
+@import "/styles/keyboard__key_space.css";
+@import "/styles/keyboard__key_enter.css";
+@import "/styles/keyboard__key_caps.css";

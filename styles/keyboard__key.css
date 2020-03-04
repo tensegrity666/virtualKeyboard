@@ -1,19 +1,7 @@
 .keyboard__key {
   box-sizing: border-box;
   text-align: center;
-  width: 8.5%;
-  max-width: 5rem;
   border: 2px solid transparent;
   border-radius: 0.7rem;
   background-color: var(--key-background-color);
-
-  margin: 4px 2px;
-}
-
-.keyboard__key_long {
-  width: 24%;
-}
-
-.keyboard__key_space {
-  width: 80%;
 }
