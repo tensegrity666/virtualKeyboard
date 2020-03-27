@@ -1,65 +1,85 @@
-const textField = document.getElementById('textfield');
+// const textField = document.getElementById('textfield');
 
-const setValue = value => {
-  if (value !== undefined) {
-    textField.setAttribute('value', `${value}`);
-  } else {
-    textField.setAttribute('value', ``);
-  }
-}
+// const setValue = (value) => {
+//   if (value !== undefined) {
+//     textField.setAttribute('value', `${value}`);
+//   }
+//   else {
+//     textField.setAttribute('value', '');
+//   }
+// };
 
-const keyboardInit = () => {
-  const page = document.querySelector('body');
-  const container = document.createElement('div');
-  page.append(container);
-  container.classList.add('keyboard__container', 'keyboard__container_hide');
-}
 
-const createFragment = () => {
+export const createFragment = () => {
   const fragment = document.createDocumentFragment();
+
   const keyLayout = [
-    '~','1','2','3','4','5','6','7','8','9','0','-','=','Backspace',
-    'Tab','q','w','e','r','t','y','u','i','o','p','[',']','\\',
+    '~', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', '-', '=', 'Backspace',
+    'Tab', 'q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o','p','[',']','\\',
     'CapsLock','a','s','d','f','g','h','j','k','l',';','\'','Enter',
-    'Shift','z','x','c','v','b','n','m','\,','\.','\/','\,','Shift',
+    'ShiftL','z','x','c','v','b','n','m','\,','\.','\/','\,','ShiftR',
     'Ctrl','Alt', 'Space', 'Alt', 'Ctrl',
   ];
 
-  keyLayout.forEach(key => {
+  keyLayout.forEach((key) => {
     const button = document.createElement('button');
-    // const lineBreak =
-
+    button.textContent = key.toLowerCase();
     button.setAttribute('type', 'button');
     button.classList.add('keyboard__key');
+    // switch(key) {
+    //   case 'Backspace':
+    //     button.classList.add('keyboard__key_backspace');
+    //     button.innerText = 'Backspace';
+    //   break;
 
-    switch(key) {
-      case 'Backspace':
-        button.classList.add('keyboard__key_backspace');
-        button.innerText = 'Backspace';
-    }
+    //   default:
+    //     button.innerText = key.toLowerCase();
+    //   break;
+    // }
+    fragment.append(button);
   });
-}
 
-const keyListen = () => {
-  let value = [];
-  document.body.addEventListener('keydown', event => {
-    event.preventDefault();
+  return fragment;
+};
 
-    if (event.code === 'Backspace') {
-      value.pop();
-    } else {
-      value.push(event.key);
-    }
+export const keyboardInit = () => {
+  const page = document.querySelector('body');
 
-    let string = value.join('');
-    setValue(string);
-  });
-}
+  const wrapper = document.createElement('div');
+  page.append(wrapper);
+  wrapper.classList.add('wrapper');
 
+  const textField = document.createElement('input');
+  wrapper.append(textField);
+  textField.setAttribute('id', 'textfield');
+  textField.setAttribute('type', 'text');
+  textField.setAttribute('value', 'rtrtr');
+
+  const container = document.createElement('div');
+  wrapper.append(container);
+  container.classList.add('keyboard__container');
+
+  container.append(createFragment());
+};
+
+// const keyListen = () => {
+//   const value = [];
+//   window.addEventListener('keydown', (event) => {
+//     event.preventDefault();
+
+//     if (event.code === 'Backspace') {
+//       value.pop();
+//     } else {
+//       value.push(event.key);
+//     }
+
+//     const string = value.join('');
+//     setValue(string);
+//   });
+// };
 
 export const keyboard = () => {
-  keyboardInit();
   createFragment();
-  keyListen();
-  setValue();
+  // keyListen();
+  // setValue();
 };

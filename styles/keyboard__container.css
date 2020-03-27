@@ -1,33 +1,22 @@
 .keyboard__container {
   box-sizing: border-box;
-  position: fixed;
-  bottom: 0;
-  left: 0;
 
-  display: grid;
-  grid-template-rows: repeat(5, 1fr);
-  grid-template-columns: repeat(10, 1fr);
-  gap: 6px 2px;
-  justify-items: stretch;
+  display: flex;
+  flex-wrap: wrap;
   justify-content: center;
+  align-items: center;
 
-  border: 1px solid transparent;
-  padding: 3px 1px 3px;
+  padding: 30px 0 10px;
 
   font-size: 2rem;
   line-height: var(--small-key-height);
-  flex-shrink: 0;
 
-  width: 100vw;
-  max-width: 1920px;
-  height: var(--small-height);
-  background-color: var(--background-color);
+  width: 1620px;
+  height: 50%;
+  background-color: #cae2e5;
   color: var(--font-color);
 
   transition: var(--transition);
-  opacity: 1;
-}
 
-.row4 {
-  grid-row: 4;
+  border-radius: 50px;
 }

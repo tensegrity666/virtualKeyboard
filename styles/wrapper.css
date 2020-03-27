@@ -1,0 +1,16 @@
+.wrapper {
+  box-sizing: border-box;
+  margin: 100px auto;
+  width: 1700px;
+  height: 760px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px;
+
+  border-radius: 70px;
+  background: #cae2e5;
+  box-shadow:  -20px 20px 60px #acc0c3,
+                20px -20px 60px #e8ffff;
+}

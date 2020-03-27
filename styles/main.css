@@ -1,8 +1,11 @@
 @import "/styles/normalize.css";
 @import "/styles/variables.css";
+@import "/styles/page.css";
+@import "/styles/wrapper.css";
 @import "/styles/keyboard__container.css";
 @import "/styles/keyboard__container_hide.css";
 @import "/styles/keyboard__key.css";
 @import "/styles/keyboard__key_space.css";
 @import "/styles/keyboard__key_enter.css";
 @import "/styles/keyboard__key_caps.css";
+@import "/styles/textfield.css";

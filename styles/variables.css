@@ -6,7 +6,12 @@
   --border-radius: 15px;
   --transition: all 0.3s linear;
 
-  --small-key-height: calc(var(--small-height) / 7);
+  --small-key-height: 20px;
+
+  overflow: hidden;
 
   font-size: 10px;
+
+  background-color: #cae2e5;
+  box-shadow: inset 80px -80px 100px -100px #53728b;
 }
