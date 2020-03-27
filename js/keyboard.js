@@ -1,6 +1,11 @@
+const textField = document.getElementById('textfield');
+
 const setValue = value => {
-  const textField = document.getElementById('textfield');
-  textField.setAttribute('value', `${value}`);
+  if (value !== undefined) {
+    textField.setAttribute('value', `${value}`);
+  } else {
+    textField.setAttribute('value', ``);
+  }
 }
 
 const keyboardInit = () => {
@@ -33,12 +38,28 @@ const createFragment = () => {
         button.innerText = 'Backspace';
     }
   });
-  console.log(keyLayout);
 }
+
+const keyListen = () => {
+  let value = [];
+  document.body.addEventListener('keydown', event => {
+    event.preventDefault();
+
+    if (event.code === 'Backspace') {
+      value.pop();
+    } else {
+      value.push(event.key);
+    }
+
+    let string = value.join('');
+    setValue(string);
+  });
+}
+
 
 export const keyboard = () => {
   keyboardInit();
   createFragment();
-  setValue(11);
-  console.log();
+  keyListen();
+  setValue();
 };
