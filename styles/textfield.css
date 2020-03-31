@@ -4,11 +4,17 @@
   height: 50%;
   border: 1px solid transparent;
   background-color: #cae2e5;
-  padding: 10px;
-  font-size: 5rem;
+  padding: 4rem;
+  font-size: 6rem;
+  line-height: 1.05;
+  outline: none;
+  font-family: var(--font);
+  color: #4d6c6e;
+  resize: none;
+  overflow: hidden;
 
   border-radius: 50px;
-background: #cae2e5;
-box-shadow: inset -5px 5px 21px #a4b7b9, 
-            inset 5px -5px 21px #f0ffff;
+  background: #cae2e5;
+  box-shadow: inset -5px 5px 21px #a4b7b9,
+              inset 5px -5px 21px #f0ffff;
 }

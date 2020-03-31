@@ -49,11 +49,9 @@ export const keyboardInit = () => {
   page.append(wrapper);
   wrapper.classList.add('wrapper');
 
-  const textField = document.createElement('input');
+  const textField = document.createElement('textarea');
   wrapper.append(textField);
   textField.setAttribute('id', 'textfield');
-  textField.setAttribute('type', 'text');
-  textField.setAttribute('value', 'rtrtr');
 
   const container = document.createElement('div');
   wrapper.append(container);

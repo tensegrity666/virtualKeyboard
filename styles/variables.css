@@ -1,12 +1,8 @@
 :root {
   --small-height: 38vh;
-  --font-color: rgb(255, 255, 255);
-  --background-color: rgba(41, 71, 55, 0.5);
-  --key-background-color: rgba(43, 106, 199, 0.8);
-  --border-radius: 15px;
-  --transition: all 0.3s linear;
-
-  --small-key-height: 20px;
+  --font: 'Sen', sans-serif;
+  --font-color: #134d68;
+  --font-hover: #2a94b4;
 
   overflow: hidden;
 
@@ -14,4 +10,5 @@
 
   background-color: #cae2e5;
   box-shadow: inset 80px -80px 100px -100px #53728b;
+
 }
