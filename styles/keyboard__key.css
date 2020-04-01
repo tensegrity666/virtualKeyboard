@@ -20,6 +20,15 @@
                 9px -9px 25px #e6ffff;
 }
 
+.keyboard__key_active {
+  background: linear-gradient(45deg, #d8f2f5, #92c1c9);
+  color: var(--font-hover);
+}
+
+.keyboard__key_upper {
+  text-transform: uppercase;
+}
+
 .keyboard__key:active {
   background: linear-gradient(45deg, #d8f2f5, #aec2c5);
   color: var(--font-hover);
