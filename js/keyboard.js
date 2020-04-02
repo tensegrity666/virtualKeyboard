@@ -23,13 +23,11 @@ let keyLayout = [];
 export const tr = () => {
   document.addEventListener('click', () => {
     isShift = 1;
-    console.log('isShift', isShift);
   });
 };
 
 if (!isShift) {
   keyLayout = keyShiftLayoutRussian;
-  console.log('2', isShift);
 } else {
   keyLayout = keyLayoutDefault;
 }
@@ -58,7 +56,7 @@ export const createFragment = () => {
         break;
 
       case 'Enter':
-        button.classList.add('keyboard__key_double');
+        button.classList.add('keyboard__key_double', 'enter');
         button.innerHTML = '&#8629 Enter';
         break;
 
@@ -82,7 +80,7 @@ export const createFragment = () => {
 
       case 'Space':
         button.classList.add('keyboard__key_space');
-        button.innerHTML = '&#863';
+        button.innerText = '';
         break;
 
       case 'Alt':
