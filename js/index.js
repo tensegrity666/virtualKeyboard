@@ -1,10 +1,9 @@
-import { keyboard, keyboardInit } from './keyboard.js';
-import { capslock } from './capslock.js';
-
+import { createFragment, keyboardInit, tr } from './keyboard.js';
+import capslock from './capslock.js';
 
 window.addEventListener('DOMContentLoaded', () => {
   keyboardInit();
-  keyboard();
+  tr();
+  createFragment();
   capslock();
-  console.log(localStorage.capslock);
 });

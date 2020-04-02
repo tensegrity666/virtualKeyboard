@@ -11,19 +11,28 @@
 import { keyLayoutDefault, keyShiftLayout, keyLayoutRussian, keyShiftLayoutRussian } from './helper.js';
 
 
-let isShift = false;
+let isShift = 0;
 let isRussian = false;
+let keyLayout = [];
 
 
 // if (isRussian) {
 //   isShift ? keyLayout = keyShiftLayoutRussian : keyLayout = keyLayoutRussian;
 // }
 
-// if (isShift) {
-//   keyLayout = keyShiftLayout;
-// } else {
-//   keyLayout = keyLayoutDefault;
-// }
+export const tr = () => {
+  document.addEventListener('click', () => {
+    isShift = 1;
+    console.log('isShift', isShift);
+  });
+};
+
+if (!isShift) {
+  keyLayout = keyShiftLayoutRussian;
+  console.log('2', isShift);
+} else {
+  keyLayout = keyLayoutDefault;
+}
 
 // document.body.addEventListener('click', event => {
 //   if (event.target.classList.contains('shift')) {
@@ -32,12 +41,11 @@ let isRussian = false;
 //   }
 // });
 
-let keyLayout = keyLayoutDefault;
-
 export const createFragment = () => {
   const fragment = document.createDocumentFragment();
 
   keyLayout.forEach((key) => {
+
     const button = document.createElement('button');
 
     button.setAttribute('type', 'button');
@@ -65,7 +73,7 @@ export const createFragment = () => {
         break;
 
       case 'CapsLock':
-        button.classList.add('keyboard__key_double');
+        button.classList.add('keyboard__key_double', 'caps');
         button.innerHTML = 'CapsLock';
         button.addEventListener('click', () => {
           button.classList.toggle('keyboard__key_active');
@@ -75,6 +83,16 @@ export const createFragment = () => {
       case 'Space':
         button.classList.add('keyboard__key_space');
         button.innerHTML = '&#863';
+        break;
+
+      case 'Alt':
+        button.classList.add('alt');
+        button.innerHTML = 'Alt';
+        break;
+
+      case 'Ctrl':
+        button.classList.add('ctrl');
+        button.innerHTML = 'Ctrl';
         break;
 
       default:
@@ -122,9 +140,3 @@ export const keyboardInit = () => {
 //     setValue(string);
 //   });
 // };
-
-export const keyboard = () => {
-  createFragment();
-  // keyListen();
-  // setValue();
-};
