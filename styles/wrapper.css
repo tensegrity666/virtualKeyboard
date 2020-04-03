@@ -1,8 +1,8 @@
 .wrapper {
   box-sizing: border-box;
-  margin: 100px auto;
+  margin: 70px auto 115px;
   width: 1700px;
-  height: 760px;
+  height: calc(100vh - 185px);
   display: flex;
   flex-direction: column;
   justify-content: space-between;

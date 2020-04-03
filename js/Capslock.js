@@ -6,7 +6,7 @@ export default function capslock() {
   capsLock.addEventListener('click', () => {
     // event.getModifierState('CapsLock');
     capsLock.classList.toggle('caps_on');
-    capsLock.classList.toggle('keyboard__key_active');
+    capsLock.classList.toggle('keyboard__key_caps');
 
     toggleCase(letters);
 

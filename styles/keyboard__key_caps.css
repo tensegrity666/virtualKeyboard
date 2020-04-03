@@ -1,2 +1,4 @@
 .keyboard__key_caps {
+  background: linear-gradient(45deg, #d8f2f5, #92c1c9);
+  color: var(--font-hover);
 }

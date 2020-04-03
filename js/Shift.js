@@ -3,6 +3,7 @@ import toggleCase from './ToggleCase.js';
 export default function shift() {
   let isShift = false;
   let isRussian = false;
+
   const capsLock = document.querySelector('.caps');
   const shiftButton = document.querySelectorAll('.shift');
   const letters = document.querySelectorAll('.keyboard__key_letter');

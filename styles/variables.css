@@ -4,11 +4,11 @@
   --font-color: #134d68;
   --font-hover: #2a94b4;
 
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
 
   font-size: 10px;
 
   background-color: #cae2e5;
   box-shadow: inset 80px -80px 100px -100px #53728b;
-
 }
