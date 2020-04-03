@@ -13,6 +13,9 @@ export default function inputTextMouse() {
       textBuffer.push('\n');
       textfield.innerHTML = ('br');
     }
+    if (event.target.classList.contains('tab')) {
+      textBuffer.push('    ');
+    }
     textfield.innerHTML = textBuffer.join('');
   });
 }

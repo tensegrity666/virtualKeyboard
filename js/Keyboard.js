@@ -1,49 +1,10 @@
-// const textField = document.getElementById('textfield');
-
-// const setValue = (value) => {
-//   if (value !== undefined) {
-//     textField.setAttribute('value', `${value}`);
-//   }
-//   else {
-//     textField.setAttribute('value', '');
-//   }
-// };
-import { keyLayoutDefault, keyShiftLayout, keyLayoutRussian, keyShiftLayoutRussian } from './helper.js';
-
-
-let isShift = 0;
-let isRussian = false;
-let keyLayout = [];
-
-
-// if (isRussian) {
-//   isShift ? keyLayout = keyShiftLayoutRussian : keyLayout = keyLayoutRussian;
-// }
-
-export const tr = () => {
-  document.addEventListener('click', () => {
-    isShift = 1;
-  });
-};
-
-if (!isShift) {
-  keyLayout = keyShiftLayoutRussian;
-} else {
-  keyLayout = keyLayoutDefault;
-}
-
-// document.body.addEventListener('click', event => {
-//   if (event.target.classList.contains('shift')) {
-//     isShift = 3;
-//     console.log("KEKE", isShift);
-//   }
-// });
+import { keyLayoutDefault } from './Helper.js';
 
 export const createFragment = () => {
+  const keyLayout = keyLayoutDefault;
   const fragment = document.createDocumentFragment();
 
   keyLayout.forEach((key) => {
-
     const button = document.createElement('button');
 
     button.setAttribute('type', 'button');
@@ -57,7 +18,7 @@ export const createFragment = () => {
 
       case 'Enter':
         button.classList.add('keyboard__key_double', 'enter');
-        button.innerHTML = '&#8629 Enter';
+        button.innerHTML = 'Enter';
         break;
 
       case 'Shift':
@@ -66,21 +27,22 @@ export const createFragment = () => {
         break;
 
       case 'Tab':
-        button.classList.add('keyboard__key_double');
-        button.innerHTML = 'Tab &#8644';
+        button.classList.add('keyboard__key_double', 'tab');
+        button.innerHTML = 'Tab';
         break;
 
       case 'CapsLock':
-        button.classList.add('keyboard__key_double', 'caps');
+        if (localStorage.capsLock) {
+          button.className = localStorage.capsLock;
+        } else {
+          button.classList.add('keyboard__key_double', 'caps');
+        }
         button.innerHTML = 'CapsLock';
-        button.addEventListener('click', () => {
-          button.classList.toggle('keyboard__key_active');
-        });
         break;
 
       case 'Space':
         button.classList.add('keyboard__key_space');
-        button.innerText = '';
+        button.innerText = ' ';
         break;
 
       case 'Alt':

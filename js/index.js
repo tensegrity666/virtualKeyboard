@@ -1,10 +1,16 @@
-import { createFragment, keyboardInit, tr } from './keyboard.js';
-import capslock from './capslock.js';
-import inputTextMouse from './inputTextMouse.js';
+import { createFragment, keyboardInit } from './Keyboard.js';
+import capslock from './Capslock.js';
+import inputTextMouse from './InputTextMouse.js';
+import setState from './SetState.js';
+import shift from './Shift.js';
+import keyLight from './KeyLight.js';
 
 window.addEventListener('DOMContentLoaded', () => {
   keyboardInit();
   createFragment();
   capslock();
+  setState();
   inputTextMouse();
+  shift();
+  keyLight();
 });
