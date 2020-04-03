@@ -7,7 +7,7 @@ export default function keyLight() {
       if (element.innerHTML === 'Ctrl' && event.key === 'Control') {
         element.classList.add('keyboard__key_active');
       } else if (element.innerHTML === event.key) {
-        element.classList.add('keyboard__key_active');
+        element.classList.add('keyboard__key_active')
       }
     });
   });

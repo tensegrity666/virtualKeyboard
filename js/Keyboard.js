@@ -84,19 +84,3 @@ export const keyboardInit = () => {
 
   container.append(createFragment());
 };
-
-// const keyListen = () => {
-//   const value = [];
-//   window.addEventListener('keydown', (event) => {
-//     event.preventDefault();
-
-//     if (event.code === 'Backspace') {
-//       value.pop();
-//     } else {
-//       value.push(event.key);
-//     }
-
-//     const string = value.join('');
-//     setValue(string);
-//   });
-// };

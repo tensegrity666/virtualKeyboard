@@ -1,6 +1,7 @@
+export const textBuffer = [];
+
 export default function inputTextMouse() {
   const textfield = document.getElementById('textfield');
-  const textBuffer = [];
 
   document.body.addEventListener('click', (event) => {
     if (event.target.classList.contains('keyboard__key_letter')) {
