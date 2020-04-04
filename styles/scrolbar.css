@@ -1,12 +1,19 @@
-body::-webkit-scrollbar {
+body::-webkit-scrollbar,
+#textfield::-webkit-scrollbar {
     width: 0.5rem;
 }
 
-body::-webkit-scrollbar-track {
+body::-webkit-scrollbar-track,
+#textfield::-webkit-scrollbar-track {
     background-color: transparent;
 }
 
-body::-webkit-scrollbar-thumb {
+#textfield::-webkit-scrollbar-track {
+    margin: 3rem 0;
+}
+
+body::-webkit-scrollbar-thumb,
+#textfield::-webkit-scrollbar-thumb {
     background-color: #cae2e5;
     border-radius: 1rem;
     outline: 1px solid skyblue;

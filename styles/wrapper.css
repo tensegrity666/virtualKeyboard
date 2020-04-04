@@ -2,7 +2,7 @@
   box-sizing: border-box;
   margin: 70px auto 115px;
   width: 1700px;
-  height: calc(100vh - 185px);
+  height: 800px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;

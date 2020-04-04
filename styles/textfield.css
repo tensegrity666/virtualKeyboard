@@ -9,12 +9,20 @@
   line-height: 1.05;
   outline: none;
   font-family: var(--font);
-  color: #4d6c6e;
+  color: transparent;
+  text-shadow: 0 0 0 #4d6c6e;
   resize: none;
-  overflow: hidden;
+  overflow-y: auto;
+  overflow-x: hidden;
+  cursor: none;
+  
 
   border-radius: 50px;
   background: #cae2e5;
   box-shadow: inset -5px 5px 21px #a4b7b9,
               inset 5px -5px 21px #f0ffff;
+}
+
+#textfield:focus {
+  outline: none;
 }
