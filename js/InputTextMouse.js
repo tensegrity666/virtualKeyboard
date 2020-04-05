@@ -17,6 +17,9 @@ export default function inputTextMouse() {
     if (event.target.classList.contains('tab')) {
       textBuffer.push('    ');
     }
+    if (event.target.classList.contains('backspace')) {
+      textBuffer.splice(textBuffer.length - 1, 1);
+    }
     textfield.innerHTML = textBuffer.join('');
   });
 }

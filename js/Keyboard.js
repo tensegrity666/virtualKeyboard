@@ -1,10 +1,10 @@
-import { keyLayoutDefault } from './Helper.js';
+import { keyLayoutDefault, keyLayoutRussian } from './Helper.js';
+
 
 export const createFragment = () => {
-  const keyLayout = keyLayoutDefault;
   const fragment = document.createDocumentFragment();
 
-  keyLayout.forEach((key) => {
+  keyLayoutDefault.forEach((key) => {
     const button = document.createElement('button');
 
     button.setAttribute('type', 'button');
@@ -12,7 +12,7 @@ export const createFragment = () => {
 
     switch (key) {
       case 'Backspace':
-        button.classList.add('keyboard__key_double');
+        button.classList.add('keyboard__key_double', 'backspace');
         button.innerHTML = 'Backspace';
         break;
 
@@ -77,6 +77,7 @@ export const keyboardInit = () => {
   const textField = document.createElement('textarea');
   wrapper.append(textField);
   textField.setAttribute('id', 'textfield');
+  textField.setAttribute('autofocus', 'true');
 
   const container = document.createElement('div');
   wrapper.append(container);

@@ -14,7 +14,7 @@
   resize: none;
   overflow-y: auto;
   overflow-x: hidden;
-  cursor: none;
+  cursor: pointer;
   
 
   border-radius: 50px;
