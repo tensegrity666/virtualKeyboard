@@ -1,7 +1,7 @@
 import { keyLayoutDefault, keyLayoutRussian } from './Helper.js';
 import { textBuffer } from './InputTextMouse.js';
 import toggleCase from './ToggleCase.js';
-import textRender from './textRender.js';
+import textRender from './TextRender.js';
 
 export default function inputTextKeyboard() {
   const textfield = document.getElementById('textfield');
