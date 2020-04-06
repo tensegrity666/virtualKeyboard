@@ -1,6 +1,5 @@
 import { textBuffer } from './InputTextMouse.js';
 import toggleCase from './ToggleCase.js';
-// import clearLocalStorage from './ClearLocalStorage.js';
 
 export default function inputTextKeyboard() {
   const textfield = document.getElementById('textfield');
@@ -41,8 +40,10 @@ export default function inputTextKeyboard() {
         break;
 
       case 'Backspace':
-        textfield.innerHTML = textfield.innerHTML.substring(0, textfield.innerHTML.length - 1);
         textBuffer.splice(textBuffer.length - 1, 1);
+        localStorage.buffer = textBuffer;
+        localStorage.text = textBuffer.join('');
+        textfield.innerHTML = localStorage.text;
         break;
 
       case 'Alt':
@@ -65,11 +66,11 @@ export default function inputTextKeyboard() {
 
       default:
         textBuffer.push(event.key);
+        localStorage.buffer = textBuffer;
         localStorage.text = textBuffer.join('');
-        textfield.value = localStorage.text;
+        textfield.innerHTML = localStorage.text;
         break;
     }
-    localStorage.text = textBuffer.join('');
   });
 
   window.addEventListener('keyup', (event) => {

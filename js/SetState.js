@@ -11,6 +11,8 @@ export default function setState() {
     });
   }
 
-  textBuffer.push(localStorage.text);
-  textfield.innerHTML = textBuffer.join('');
+  const savedString = localStorage.buffer.split(',');
+  savedString.forEach((el) => textBuffer.push(el));
+  localStorage.text = textBuffer.join('');
+  textfield.innerHTML = localStorage.text;
 }
