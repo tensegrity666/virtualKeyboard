@@ -4,12 +4,10 @@
   --font-color: #134d68;
   --font-hover: #2a94b4;
   --wrapper-width: 1700px;
-  --wrapper-height:  750px;
+  --wrapper-height: 750px;
 
   overflow-x: hidden;
   overflow-y: auto;
-
   font-size: 10px;
-
   background-color: #acc0c398;
 }
