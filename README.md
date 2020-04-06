@@ -2,7 +2,7 @@ https://tensegrity666.github.io/virtualKeyboard/
 
 ## Virtual Keyboard
 
-It has full functionality when typing with the mouse in English and Russian,
+English and Russian supports,
 
 partially duplicates the functionality of a physical keyboard.
 
