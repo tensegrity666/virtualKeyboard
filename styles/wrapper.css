@@ -1,17 +1,17 @@
 .wrapper {
   position: relative;
   box-sizing: border-box;
-  margin: 50px auto 115px;
-  width: var(--wrapper-width);
-  height: var(--wrapper-height);
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
+  width: var(--wrapper-width);
+  height: var(--wrapper-height);
   padding: 40px;
-
-  border-radius: 70px;
+  margin: 50px auto 115px;
   background: #cae2e5;
-  box-shadow:  -20px 20px 60px #acc0c3,
-                20px -20px 60px #e8ffff;
+  border-radius: 70px;
+  box-shadow:
+    -20px 20px 60px #acc0c3,
+    20px -20px 60px #e8ffff;
 }

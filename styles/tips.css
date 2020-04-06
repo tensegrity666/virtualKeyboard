@@ -1,15 +1,14 @@
 .tips {
-  box-sizing: border-box;
   position: absolute;
+  right: auto;
   bottom: -10rem;
   left: auto;
-  right: auto;
+  box-sizing: border-box;
   width: var(--wrapper-width);
   height: 10rem;
-  font-size: 2.4rem;
   padding: 2.5rem 6rem;
-
   font-family: var(--font);
+  font-size: 2.4rem;
   color: var(--font-color);
   opacity: 0.6;
 }

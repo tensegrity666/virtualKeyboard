@@ -3,6 +3,6 @@
 }
 
 .keyboard__key_space:active {
-  background: linear-gradient(5deg, #d8f2f5, #aec2c5);
   text-shadow: #6a949b 1px 0 30px;
+  background: linear-gradient(5deg, #d8f2f5, #aec2c5);
 }

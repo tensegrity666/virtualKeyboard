@@ -2,25 +2,24 @@
   box-sizing: border-box;
   width: 1620px;
   height: 50%;
-  border: 1px solid transparent;
-  background-color: #cae2e5;
   padding: 4rem;
+  overflow-x: hidden;
+  overflow-y: auto;
+  font-family: var(--font);
   font-size: 6rem;
   line-height: 1.05;
-  outline: none;
-  font-family: var(--font);
   color: transparent;
   text-shadow: 0 0 0 #4d6c6e;
-  resize: none;
-  overflow-y: auto;
-  overflow-x: hidden;
   cursor: pointer;
-  
-
-  border-radius: 50px;
+  resize: none;
   background: #cae2e5;
-  box-shadow: inset -5px 5px 21px #a4b7b9,
-              inset 5px -5px 21px #f0ffff;
+  background-color: #cae2e5;
+  border: 1px solid transparent;
+  border-radius: 50px;
+  outline: none;
+  box-shadow:
+    inset -5px 5px 21px #a4b7b9,
+    inset 5px -5px 21px #f0ffff;
 }
 
 #textfield:focus {
