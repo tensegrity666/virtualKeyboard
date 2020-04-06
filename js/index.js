@@ -7,7 +7,6 @@ import shift from './Shift.js';
 import keyLight from './KeyLight.js';
 import clearLocalStorage from './ClearLocalStorage.js';
 
-
 window.addEventListener('DOMContentLoaded', () => {
   keyboardInit();
   capslock();

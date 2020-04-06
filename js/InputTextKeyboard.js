@@ -1,3 +1,4 @@
+import { keyLayoutDefault, keyLayoutRussian } from './Helper.js';
 import { textBuffer } from './InputTextMouse.js';
 import toggleCase from './ToggleCase.js';
 
@@ -5,6 +6,7 @@ export default function inputTextKeyboard() {
   const textfield = document.getElementById('textfield');
   const capsLock = document.querySelector('.caps');
   const letters = document.querySelectorAll('.keyboard__key_letter');
+  const buttons = document.querySelectorAll('.keyboard__key');
 
   window.addEventListener('keydown', (event) => {
     switch (event.key) {
@@ -39,6 +41,10 @@ export default function inputTextKeyboard() {
         textBuffer.push('    ');
         break;
 
+      case '':
+        textBuffer.push(' ');
+        break;
+
       case 'Backspace':
         textBuffer.splice(textBuffer.length - 1, 1);
         localStorage.buffer = textBuffer;
@@ -65,7 +71,20 @@ export default function inputTextKeyboard() {
         break;
 
       default:
-        textBuffer.push(event.key);
+        if (localStorage.language === 'rus') {
+          keyLayoutDefault.forEach((element) => {
+            if (element === event.key.toLowerCase()) {
+              const index = keyLayoutDefault.indexOf(element);
+              textBuffer.push(keyLayoutRussian[index]);
+              buttons[index].classList.add('keyboard__key_press');
+            }
+          });
+          if (event.code === 'Space') {
+            textBuffer.push(' ');
+          }
+        } else {
+          textBuffer.push(event.key);
+        }
         localStorage.buffer = textBuffer;
         localStorage.text = textBuffer.join('');
         textfield.innerHTML = localStorage.text;
@@ -82,6 +101,12 @@ export default function inputTextKeyboard() {
           capsLock.classList.remove('caps_on');
           toggleCase(letters);
         }
+        break;
+
+      default:
+        letters.forEach((element) => {
+          element.classList.remove('keyboard__key_press');
+        });
         break;
     }
   });

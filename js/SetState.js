@@ -11,8 +11,10 @@ export default function setState() {
     });
   }
 
-  const savedString = localStorage.buffer.split(',');
-  savedString.forEach((el) => textBuffer.push(el));
-  localStorage.text = textBuffer.join('');
-  textfield.innerHTML = localStorage.text;
+  if (localStorage.buffer) {
+    const savedString = localStorage.buffer.split(',');
+    savedString.forEach((el) => textBuffer.push(el));
+    localStorage.text = textBuffer.join('');
+    textfield.innerHTML = localStorage.text;
+  }
 }

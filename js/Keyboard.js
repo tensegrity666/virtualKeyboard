@@ -1,12 +1,12 @@
 import { keyLayoutDefault, keyLayoutRussian } from './Helper.js';
 
 let language = [];
+
 if (localStorage.language === 'rus') {
   language = keyLayoutRussian;
 } else {
   language = keyLayoutDefault;
 }
-
 
 function createFragment() {
   const fragment = document.createDocumentFragment();

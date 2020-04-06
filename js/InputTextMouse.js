@@ -22,8 +22,8 @@ export default function inputTextMouse() {
     if (event.target.classList.contains('backspace')) {
       textBuffer.splice(textBuffer.length - 1, 1);
     }
+    localStorage.buffer = textBuffer;
     localStorage.text = textBuffer.join('');
     textfield.innerHTML = localStorage.text;
   });
-
 }
