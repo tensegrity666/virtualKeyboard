@@ -1,6 +1,7 @@
 import { keyLayoutDefault, keyLayoutRussian } from './Helper.js';
 import { textBuffer } from './InputTextMouse.js';
 import toggleCase from './ToggleCase.js';
+import textRender from './textRender.js';
 
 export default function inputTextKeyboard() {
   const textfield = document.getElementById('textfield');
@@ -58,6 +59,26 @@ export default function inputTextKeyboard() {
       case 'Control':
         break;
 
+      case 'ArrowRight':
+        textBuffer.push('➡');
+        textRender(textBuffer, textfield);
+        break;
+
+      case 'ArrowLeft':
+        textBuffer.push('⬅');
+        textRender(textBuffer, textfield);
+        break;
+
+      case 'ArrowUp':
+        textBuffer.push('⬆');
+        textRender(textBuffer, textfield);
+        break;
+
+      case 'ArrowDown':
+        textBuffer.push('⬇');
+        textRender(textBuffer, textfield);
+        break;
+
       case 'Meta':
         if (localStorage.language === 'en') {
           localStorage.language = 'rus';
@@ -85,9 +106,7 @@ export default function inputTextKeyboard() {
         } else {
           textBuffer.push(event.key);
         }
-        localStorage.buffer = textBuffer;
-        localStorage.text = textBuffer.join('');
-        textfield.innerHTML = localStorage.text;
+        textRender(textBuffer, textfield);
         break;
     }
   });
