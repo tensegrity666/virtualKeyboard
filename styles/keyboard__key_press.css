@@ -1,0 +1,5 @@
+.keyboard__key_press {
+  background: linear-gradient(45deg, #d8f2f5, #aec2c5);
+  color: var(--font-hover);
+  text-shadow: #6a949b 1px -1px 10px;
+}

@@ -3,9 +3,11 @@
 @import "../styles/wrapper.css";
 @import "../styles/keyboard__container.css";
 @import "../styles/keyboard__key.css";
+@import "../styles/keyboard__key_press.css";
 @import "../styles/keyboard__key_space.css";
 @import "../styles/keyboard__key_caps.css";
 @import "../styles/keyboard__key_double.css";
 @import "../styles/keyboard__key_triple.css";
 @import "../styles/textfield.css";
 @import "../styles/scrolbar.css";
+@import "../styles/tips.css";

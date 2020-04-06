@@ -1,8 +1,9 @@
 .wrapper {
+  position: relative;
   box-sizing: border-box;
-  margin: 70px auto 115px;
-  width: 1700px;
-  height: 800px;
+  margin: 50px auto 115px;
+  width: var(--wrapper-width);
+  height: var(--wrapper-height);
   display: flex;
   flex-direction: column;
   justify-content: space-between;

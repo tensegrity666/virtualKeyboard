@@ -1,0 +1,15 @@
+.tips {
+  box-sizing: border-box;
+  position: absolute;
+  bottom: -10rem;
+  left: auto;
+  right: auto;
+  width: var(--wrapper-width);
+  height: 10rem;
+  font-size: 2.4rem;
+  padding: 2.5rem 6rem;
+
+  font-family: var(--font);
+  color: var(--font-color);
+  opacity: 0.6;
+}
