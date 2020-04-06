@@ -4,6 +4,8 @@ export default function inputTextMouse() {
   const textfield = document.getElementById('textfield');
 
   document.body.addEventListener('click', (event) => {
+    event.preventDefault();
+
     if (event.target.classList.contains('keyboard__key_letter')) {
       textBuffer.push(event.target.innerText);
     }
@@ -20,6 +22,8 @@ export default function inputTextMouse() {
     if (event.target.classList.contains('backspace')) {
       textBuffer.splice(textBuffer.length - 1, 1);
     }
-    textfield.innerHTML = textBuffer.join('');
+    localStorage.text = textBuffer.join('');
+    textfield.innerHTML = localStorage.text;
   });
+
 }

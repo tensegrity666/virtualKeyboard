@@ -1,10 +1,17 @@
 import { keyLayoutDefault, keyLayoutRussian } from './Helper.js';
 
+let language = [];
+if (localStorage.language === 'rus') {
+  language = keyLayoutRussian;
+} else {
+  language = keyLayoutDefault;
+}
 
-export const createFragment = () => {
+
+function createFragment() {
   const fragment = document.createDocumentFragment();
 
-  keyLayoutDefault.forEach((key) => {
+  language.forEach((key) => {
     const button = document.createElement('button');
 
     button.setAttribute('type', 'button');
@@ -65,9 +72,9 @@ export const createFragment = () => {
   });
 
   return fragment;
-};
+}
 
-export const keyboardInit = () => {
+export default function keyboardInit() {
   const page = document.querySelector('body');
 
   const wrapper = document.createElement('div');
