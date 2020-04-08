@@ -53,9 +53,6 @@ export default function inputTextKeyboard() {
         textfield.innerHTML = localStorage.text;
         break;
 
-      case 'Alt':
-        break;
-
       case 'Control':
         break;
 
@@ -79,7 +76,7 @@ export default function inputTextKeyboard() {
         textRender(textBuffer, textfield);
         break;
 
-      case 'Meta':
+      case 'Alt':
         if (localStorage.language === 'en') {
           localStorage.language = 'rus';
         } else {
