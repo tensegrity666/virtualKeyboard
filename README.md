@@ -13,5 +13,5 @@ _partially duplicates the functionality of a physical keyboard._
 
 ______________________________________________________________________________________________________
 
-* Tested for compatibility in __Chrome/Opera/Firefox__ in __UBUNTU 18.04__  (not in Windows)
+* Tested for compatibility in __Chrome/Opera/Firefox__
 * _NOT responsive_
