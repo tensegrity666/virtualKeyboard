@@ -1,4 +1,4 @@
-import { keyLayoutDefault, keyLayoutRussian } from './Helper.js';
+import { keyLayoutDefault, keyShiftLayoutRussian, functionalKeys } from './Helper.js';
 import { textBuffer } from './InputTextMouse.js';
 import toggleCase from './ToggleCase.js';
 import textRender from './TextRender.js';
@@ -53,9 +53,6 @@ export default function inputTextKeyboard() {
         textfield.innerHTML = localStorage.text;
         break;
 
-      case 'Control':
-        break;
-
       case 'ArrowRight':
         textBuffer.push('➡');
         textRender(textBuffer, textfield);
@@ -76,7 +73,8 @@ export default function inputTextKeyboard() {
         textRender(textBuffer, textfield);
         break;
 
-      case 'Alt':
+      case 'OS' || 'Meta':
+        event.preventDefault();
         if (localStorage.language === 'en') {
           localStorage.language = 'rus';
         } else {
@@ -88,12 +86,21 @@ export default function inputTextKeyboard() {
       case 'F5':
         break;
 
+      case 'Escape':
+        break;
+
+      case 'Alt':
+        break;
+
+      case 'Control':
+        break;
+
       default:
         if (localStorage.language === 'rus') {
           keyLayoutDefault.forEach((element) => {
             if (element === event.key.toLowerCase()) {
               const index = keyLayoutDefault.indexOf(element);
-              textBuffer.push(keyLayoutRussian[index]);
+              textBuffer.push(keyShiftLayoutRussian[index]);
               buttons[index].classList.add('keyboard__key_press');
             }
           });
@@ -103,6 +110,7 @@ export default function inputTextKeyboard() {
         } else {
           textBuffer.push(event.key);
         }
+
         textRender(textBuffer, textfield);
         break;
     }

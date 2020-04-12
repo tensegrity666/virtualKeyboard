@@ -29,3 +29,5 @@ export const keyShiftLayoutRussian = [
   'Shift', 'я', 'ч', 'с', 'м', 'и', 'т', 'ь', 'б', 'ю', ',', 'Shift',
   'Ctrl', 'Alt', 'Space', 'Alt', 'Ctrl',
 ];
+
+export const functionalKeys = ['Escape', 'F1', 'F2', 'F3', 'F4', 'F6', 'F7', 'F8', 'F9', 'F10', 'F11', 'F12', 'Insert', 'Home', 'PageUp', 'PageDown', 'End', 'Delete', 'NumLock'];

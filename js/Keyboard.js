@@ -1,9 +1,9 @@
-import { keyLayoutDefault, keyLayoutRussian } from './Helper.js';
+import { keyLayoutDefault, keyShiftLayoutRussian } from './Helper.js';
 
 let language = [];
 
 if (localStorage.language === 'rus') {
-  language = keyLayoutRussian;
+  language = keyShiftLayoutRussian;
 } else {
   language = keyLayoutDefault;
 }
@@ -93,7 +93,7 @@ export default function keyboardInit() {
   const tips = document.createElement('div');
   wrapper.append(tips);
   tips.classList.add('tips');
-  tips.innerText = `Use Alt to switch input language
+  tips.innerText = `Use Shift + Win to switch input language (in Windows)
     Press F5 on your keyboard to clear input area`;
 
   container.append(createFragment());

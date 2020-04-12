@@ -2,3 +2,9 @@
   width: 9%;
   font-size: 2rem;
 }
+
+@media (max-width: 1280px) {
+  .keyboard__key_double {
+    font-size: 1.4rem;
+  }
+}

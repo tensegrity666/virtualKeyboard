@@ -8,20 +8,14 @@
   font-family: var(--font);
   font-size: 3.8rem;
   line-height: 1.05;
-  color: transparent;
-  text-shadow: 0 0 0 #4d6c6e;
+  color: #4d6c6e;
   cursor: pointer;
   resize: none;
   background: #cae2e5;
   background-color: #cae2e5;
   border: 1px solid transparent;
   border-radius: 50px;
-  outline: none;
   box-shadow:
     inset -5px 5px 21px #a4b7b9,
     inset 5px -5px 21px #f0ffff;
-}
-
-#textfield:focus {
-  outline: none;
 }
