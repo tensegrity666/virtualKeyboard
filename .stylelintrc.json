@@ -5,6 +5,6 @@
 ],
   "rules": {
     "declaration-no-important": true,
-    "color-hex-length": "long"
+    "color-hex-length": "short"
   }
 }

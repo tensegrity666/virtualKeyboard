@@ -1,4 +1,4 @@
-import { keyLayoutDefault, keyShiftLayoutRussian, functionalKeys } from './Helper.js';
+import { keyLayoutDefault, keyShiftLayoutRussian } from './Helper.js';
 import { textBuffer } from './InputTextMouse.js';
 import toggleCase from './ToggleCase.js';
 import textRender from './TextRender.js';
@@ -73,14 +73,13 @@ export default function inputTextKeyboard() {
         textRender(textBuffer, textfield);
         break;
 
-      case 'OS' || 'Meta':
-        event.preventDefault();
+      case 'Control':
         if (localStorage.language === 'en') {
           localStorage.language = 'rus';
         } else {
           localStorage.language = 'en';
         }
-        window.location.reload();
+        location.reload();
         break;
 
       case 'F5':
@@ -90,9 +89,6 @@ export default function inputTextKeyboard() {
         break;
 
       case 'Alt':
-        break;
-
-      case 'Control':
         break;
 
       default:

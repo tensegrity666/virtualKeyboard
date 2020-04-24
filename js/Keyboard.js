@@ -93,8 +93,8 @@ export default function keyboardInit() {
   const tips = document.createElement('div');
   wrapper.append(tips);
   tips.classList.add('tips');
-  tips.innerText = `Use Shift + Win to switch input language (in Windows)
-    Press F5 on your keyboard to clear input area`;
+  tips.innerText = `Use Ctrl to switch input language
+  Press F5 on your keyboard to clear input area`;
 
   container.append(createFragment());
 }
